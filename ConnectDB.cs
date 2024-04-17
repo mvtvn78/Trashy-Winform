@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using Trashy_WinForm.ConnectDatabase;
 namespace Trashy_WinForm
 {
-    public partial class ConnectDB : Form
+    public partial class ConnectDB  :Form
     {
         private SQLConnect sQLConnect;
         public ConnectDB()
@@ -19,6 +19,7 @@ namespace Trashy_WinForm
             InitializeComponent();
             sQLConnect = new SQLConnect();
         }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -12,6 +12,9 @@ namespace Trashy_WinForm.ConnectDatabase
     {
         private string strCon;
         private SqlConnection sqlCon;
+
+        public SqlConnection SqlCon { get => sqlCon; }
+
         public SQLConnect() 
         {
             strCon = @"Data Source=MVT\SQLEXPRESS01;Initial Catalog=mvt;Integrated Security=True;";

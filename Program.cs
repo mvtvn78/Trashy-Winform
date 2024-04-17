@@ -16,7 +16,7 @@ namespace Trashy_WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConnectDB());
+            Application.Run(new CRUD());
         }
     }
 }

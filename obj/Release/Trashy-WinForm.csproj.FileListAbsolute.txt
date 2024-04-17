@@ -1,0 +1,5 @@
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Release\Trashy-WinForm.csproj.AssemblyReference.cache
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Release\Trashy_WinForm.ConnectDB.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Release\Trashy_WinForm.Properties.Resources.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Release\Trashy-WinForm.csproj.GenerateResource.cache
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Release\Trashy-WinForm.csproj.CoreCompileInputs.cache
