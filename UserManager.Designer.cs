@@ -56,6 +56,7 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.mvtDataSet = new Trashy_WinForm.mvtDataSet();
             this.mvtDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -143,6 +144,8 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridView1.Location = new System.Drawing.Point(78, 238);
             this.dataGridView1.Name = "dataGridView1";
@@ -150,7 +153,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(607, 132);
             this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 
@@ -204,6 +206,7 @@
             this.button1.Text = "Thêm";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -244,6 +247,7 @@
             this.button5.Text = "Thoát";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // pictureBox1
             // 
@@ -309,6 +313,14 @@
             // 
             this.mvtDataSetBindingSource.DataSource = this.mvtDataSet;
             this.mvtDataSetBindingSource.Position = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "CodeId";
+            this.Column1.HeaderText = "Mã số";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // UserManager
             // 
@@ -386,5 +398,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.BindingSource mvtDataSetBindingSource;
         private mvtDataSet mvtDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

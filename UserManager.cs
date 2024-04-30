@@ -25,19 +25,35 @@ namespace Trashy_WinForm
 
         private void label1_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+        private void Load_DataGrid()
         {
-
+            dataGridView1.DataSource = users;
         }
-
         private void UserManager_Load(object sender, EventArgs e)
         {
-            users.Add(new User(1, "m1", "v", "t", "a", "e"));
-            users.Add(new User(2, "m1", "v", "t", "a", "e"));
-            dataGridView1.DataSource = users;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+
+            try
+            {
+                users.Add(new User(int.Parse(textBox1.Text), textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text));
+                Load_DataGrid();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
