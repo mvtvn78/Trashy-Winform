@@ -10,7 +10,9 @@ F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy-WinForm.pdb
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.CRUD.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\bin\Debug\KAutoHelper.dll
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy-W.AD05AF4B.Up2Date
-F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.PhepCong.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.Students.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.Stupid.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.UserManager.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.SVien.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.BT1.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.BT2.resources
