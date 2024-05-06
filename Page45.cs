@@ -18,7 +18,6 @@ namespace Trashy_WinForm
         {
             InitializeComponent();
             svs = new List<SinhVien1>();
-            remove.Visible = false;
         }
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -31,7 +30,6 @@ namespace Trashy_WinForm
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            remove.Visible = false;
             try
             {
                 dataGridView1.DataSource = new List<SinhVien1>();
@@ -71,7 +69,6 @@ namespace Trashy_WinForm
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            remove.Visible = true;
             textBox1.Text = svs[e.RowIndex].MASV.ToString();
             textBox2.Text = svs[e.RowIndex].Hoten.ToString();
             dateTimePicker1.Text = svs[e.RowIndex].Ngaysinh;
@@ -88,7 +85,7 @@ namespace Trashy_WinForm
             }    
         }
 
-        private void remove_Click(object sender, EventArgs e)
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

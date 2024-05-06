@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adapter.Designer.cs">
+      <DependentUpon>Adapter.cs</DependentUpon>
+    </Compile>
     <Compile Include="BT2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
       <DependentUpon>UserManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Xe.cs" />
+    <EmbeddedResource Include="Adapter.resx">
+      <DependentUpon>Adapter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BT2.resx">
       <DependentUpon>BT2.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +189,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\anhnen 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
