@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Iteraction
+using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,33 +10,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Trashy_WinForm
 {
     public partial class Adapter : Form
     {
-        private string strcon = "Data Source=MVT\\SQLEXPRESS01;Initial Catalog=mvt;Integrated Security=True;";
-        private SqlConnection conn;
-        private SqlCommand cmd;
+
+        DataTable dt ;
 
         public Adapter()
         {
             InitializeComponent();
-            conn = new SqlConnection(strcon);
-            if (conn.State != ConnectionState.Open)
-            {
-                conn.Open();
-                MessageBox.Show("Connection successfully");
-                cmd = new SqlCommand("select * from test",conn);
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
-                DataTable dtSV = new DataTable();
-                sqlDataAdapter.Fill(dtSV);
-                dataGridView1.DataSource = dtSV;
-            }   
+            dt = new DataTable();
+            dt.Columns.Add("ID",typeof(int));
+            dt.Columns.Add("First Name",typeof(string));
+            dataGridView1.DataSource = dt;
         }
 
         private void Adapter_Load(object sender, EventArgs e)
         {
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dt.Rows.Add(1, "Mai Văn Tiền");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.CurrentRow == null)
+                    throw new Exception("ss");
+                DataRow row = dt.Rows[dataGridView1.CurrentRow.Index];
+                dt.Rows.Remove(row);
+            }
+            catch (Exception  )
+            {
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(dt.Rows.Count.ToString());
 
         }
     }

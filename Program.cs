@@ -16,7 +16,7 @@ namespace Trashy_WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new JSON());
+            Application.Run(new Adapter());
         }
     }
 }

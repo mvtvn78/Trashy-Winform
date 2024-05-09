@@ -36,6 +36,10 @@
     <Reference Include="KAutoHelper">
       <HintPath>..\..\..\..\ControlApplication\Thư viện KAutoHelper\KAutoHelper.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -55,6 +59,13 @@
     <Compile Include="Adapter.Designer.cs">
       <DependentUpon>Adapter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Arr1D.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arr1D.Designer.cs">
+      <DependentUpon>Arr1D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArrClass.cs" />
     <Compile Include="BT2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +78,18 @@
     </Compile>
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JSON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSON.Designer.cs">
+      <DependentUpon>JSON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maytinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maytinh.Designer.cs">
+      <DependentUpon>Maytinh.cs</DependentUpon>
     </Compile>
     <Compile Include="mvtDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -126,6 +149,9 @@
     <EmbeddedResource Include="Adapter.resx">
       <DependentUpon>Adapter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Arr1D.resx">
+      <DependentUpon>Arr1D.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BT2.resx">
       <DependentUpon>BT2.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BT1.resx">
       <DependentUpon>BT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maytinh.resx">
+      <DependentUpon>Maytinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Page45.resx">
       <DependentUpon>Page45.cs</DependentUpon>
@@ -174,6 +203,7 @@
     <None Include="mvtDataSet.xss">
       <DependentUpon>mvtDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

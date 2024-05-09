@@ -8,6 +8,20 @@ namespace Trashy_WinForm
 {
     internal class SinhVien1
     {
+        public SinhVien1()
+        {
+
+        }
+        public SinhVien1(int mASV, string hoten, string ngaysinh, string quequan, string lop, string khoa, string gioitinh)
+        {
+            MASV = mASV;
+            Hoten = hoten;
+            Ngaysinh = ngaysinh;
+            Quequan = quequan;
+            Lop = lop;
+            Khoa = khoa;
+            Gioitinh = gioitinh;
+        }
         public SinhVien1(int mASV, string hoten, string ngaysinh, string quequan, string lop, string khoa, bool gioitinh)
         {
             MASV = mASV;
@@ -18,6 +32,8 @@ namespace Trashy_WinForm
             Khoa = khoa;
             Gioitinh = (gioitinh) ? "Nam" : "Nữ";
         }
+
+      
 
         public int MASV { get; set; }
         public string Hoten { get; set; }

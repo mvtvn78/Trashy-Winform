@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Trashy_WinForm
 {
     public partial class Practice : Form
     {
+        List<string> hello = new List<string>() { "Mai Văn Tiền", "Đẹp trai"};
         public Practice()
         {
             InitializeComponent();
-            dateTimePicker1.Format = DateTimePickerFormat.Time;
-
+            comboBox1.DataSource = new Dictionary<string, string>()
+            {
+                {"HEllo1","COM1" },
+                {"HEllo2","COM2" },
+            }.ToList();
+            comboBox1.DisplayMember = "Value";
+            comboBox1.ValueMember = "Key";
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -37,8 +44,8 @@ namespace Trashy_WinForm
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show(dateTimePicker1.Text);
-            MessageBox.Show(dateTimePicker1.Value.ToString());
+
+            MessageBox.Show(comboBox1.SelectedValue.ToString());
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -70,6 +77,11 @@ namespace Trashy_WinForm
         private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
