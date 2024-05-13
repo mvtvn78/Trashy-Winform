@@ -72,6 +72,12 @@
     <Compile Include="BT2.Designer.cs">
       <DependentUpon>BT2.cs</DependentUpon>
     </Compile>
+    <Compile Include="CaPheSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaPheSinhVien.Designer.cs">
+      <DependentUpon>CaPheSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectDatabase\SQLConnect.cs" />
     <Compile Include="CRUD.cs">
       <SubType>Form</SubType>
@@ -79,11 +85,23 @@
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="giaiphuongtrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giaiphuongtrinh.Designer.cs">
+      <DependentUpon>giaiphuongtrinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="JSON.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JSON.Designer.cs">
       <DependentUpon>JSON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mananh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mananh.Designer.cs">
+      <DependentUpon>Mananh.cs</DependentUpon>
     </Compile>
     <Compile Include="Maytinh.cs">
       <SubType>Form</SubType>
@@ -110,6 +128,7 @@
     <Compile Include="Page45.Designer.cs">
       <DependentUpon>Page45.cs</DependentUpon>
     </Compile>
+    <Compile Include="PhuongTrinhBacHai.cs" />
     <Compile Include="Practice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,11 +174,20 @@
     <EmbeddedResource Include="BT2.resx">
       <DependentUpon>BT2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CaPheSinhVien.resx">
+      <DependentUpon>CaPheSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD.resx">
       <DependentUpon>CRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BT1.resx">
       <DependentUpon>BT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giaiphuongtrinh.resx">
+      <DependentUpon>giaiphuongtrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mananh.resx">
+      <DependentUpon>Mananh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maytinh.resx">
       <DependentUpon>Maytinh.cs</DependentUpon>
