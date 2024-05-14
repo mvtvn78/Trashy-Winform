@@ -97,6 +97,12 @@
     <Compile Include="JSON.Designer.cs">
       <DependentUpon>JSON.cs</DependentUpon>
     </Compile>
+    <Compile Include="JSONHomework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSONHomework.Designer.cs">
+      <DependentUpon>JSONHomework.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mananh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="giaiphuongtrinh.resx">
       <DependentUpon>giaiphuongtrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JSONHomework.resx">
+      <DependentUpon>JSONHomework.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mananh.resx">
       <DependentUpon>Mananh.cs</DependentUpon>
