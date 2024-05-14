@@ -14,9 +14,15 @@ namespace Trashy_WinForm
     public partial class Practice : Form
     {
         List<string> hello = new List<string>() { "Mai Văn Tiền", "Đẹp trai"};
+        DataTable dt;
         public Practice()
         {
             InitializeComponent();
+            dt = new DataTable();
+            dt.Columns.Add("Hello", typeof(string));
+            dt.Columns.Add("index", typeof(int));
+            dt.Rows.Add("hello1",1);
+            dt.Rows.Add("hello2", 2);
             comboBox1.DataSource = new Dictionary<string, string>()
             {
                 {"HEllo1","COM1" },
@@ -24,6 +30,10 @@ namespace Trashy_WinForm
             }.ToList();
             comboBox1.DisplayMember = "Value";
             comboBox1.ValueMember = "Key";
+
+            comboBox2.DataSource = dt;
+            comboBox2.DisplayMember = "Hello";
+            comboBox2.ValueMember = "index";
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

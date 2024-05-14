@@ -16,7 +16,7 @@ namespace Trashy_WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CaPheSinhVien());
+            Application.Run(new Adapter());
         }
     }
 }

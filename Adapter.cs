@@ -23,6 +23,8 @@ namespace Trashy_WinForm
             dt = new DataTable();
             dt.Columns.Add("ID",typeof(int));
             dt.Columns.Add("First Name",typeof(string));
+            dt.PrimaryKey = new DataColumn[] { dt.Columns["ID"], dt.Columns["First Name"] };
+            dt.TableName = " Testing";
             dataGridView1.DataSource = dt;
         }
 
@@ -32,7 +34,7 @@ namespace Trashy_WinForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dt.Rows.Add(1, "Mai Văn Tiền");
+            dt.NewRow();
         }
 
         private void button2_Click(object sender, EventArgs e)
