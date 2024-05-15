@@ -103,6 +103,12 @@
     <Compile Include="JSONHomework.Designer.cs">
       <DependentUpon>JSONHomework.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListBox.Designer.cs">
+      <DependentUpon>ListBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mananh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     <Compile Include="BT1Form.Designer.cs">
       <DependentUpon>BT1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Timer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timer.Designer.cs">
+      <DependentUpon>Timer.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserManager.cs">
       <SubType>Form</SubType>
@@ -200,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JSONHomework.resx">
       <DependentUpon>JSONHomework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBox.resx">
+      <DependentUpon>ListBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mananh.resx">
       <DependentUpon>Mananh.cs</DependentUpon>
@@ -234,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BT1Form.resx">
       <DependentUpon>BT1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer.resx">
+      <DependentUpon>Timer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManager.resx">
       <DependentUpon>UserManager.cs</DependentUpon>

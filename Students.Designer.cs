@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Kaioken2");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Kaioken", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Hello", new System.Windows.Forms.TreeNode[] {
+            treeNode2});
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +50,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.RichTextBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
             // label1
@@ -157,7 +163,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(665, 146);
+            this.button2.Location = new System.Drawing.Point(697, 143);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 14;
@@ -169,7 +175,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(665, 192);
+            this.button3.Location = new System.Drawing.Point(697, 189);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 15;
@@ -201,17 +207,33 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(401, 146);
+            this.textBox2.Location = new System.Drawing.Point(464, 146);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 226);
             this.textBox2.TabIndex = 19;
             this.textBox2.Text = "";
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(308, 166);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Node2";
+            treeNode1.Text = "Kaioken2";
+            treeNode2.Name = "Node1";
+            treeNode2.Text = "Kaioken";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "Hello";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3});
+            this.treeView1.Size = new System.Drawing.Size(142, 219);
+            this.treeView1.TabIndex = 20;
             // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.treeView1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -256,5 +278,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.RichTextBox textBox2;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
