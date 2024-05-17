@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using System.IO;
 namespace Trashy_WinForm
 {
     public partial class Practice : Form
@@ -115,6 +115,17 @@ namespace Trashy_WinForm
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kaioken");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter streamWriter = File.CreateText(saveFileDialog2.FileName);
+                streamWriter.Write("Kaioken");
+                streamWriter.Close();
+
+            }
         }
     }
 }
