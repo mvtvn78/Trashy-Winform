@@ -30,3 +30,4 @@ F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.MDI.res
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.JSONHomework.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.ListBoxs.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.Timer.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.HotKey.resources
