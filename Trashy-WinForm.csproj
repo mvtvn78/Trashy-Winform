@@ -59,6 +59,12 @@
     <Compile Include="Adapter.Designer.cs">
       <DependentUpon>Adapter.cs</DependentUpon>
     </Compile>
+    <Compile Include="ADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADO.Designer.cs">
+      <DependentUpon>ADO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Arr1D.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +203,9 @@
     <Compile Include="Xe.cs" />
     <EmbeddedResource Include="Adapter.resx">
       <DependentUpon>Adapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADO.resx">
+      <DependentUpon>ADO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Arr1D.resx">
       <DependentUpon>Arr1D.cs</DependentUpon>
