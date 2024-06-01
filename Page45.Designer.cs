@@ -39,13 +39,9 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MASV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.a = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -53,10 +49,14 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.a = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.thêmToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.add = new System.Windows.Forms.Button();
+            this.MASV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.a.SuspendLayout();
             this.SuspendLayout();
@@ -172,63 +172,27 @@
             this.dataGridView1.TabIndex = 10;
             this.toolTip1.SetToolTip(this.dataGridView1, "Grid view");
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // MASV
+            // a
             // 
-            this.MASV.DataPropertyName = "MASV";
-            this.MASV.HeaderText = "Mã SV";
-            this.MASV.MinimumWidth = 6;
-            this.MASV.Name = "MASV";
-            this.MASV.Width = 125;
+            this.a.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.a.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thêmToolStripMenuItem,
+            this.xóaToolStripMenuItem});
+            this.a.Name = "contextMenuStrip1";
+            this.a.Size = new System.Drawing.Size(116, 52);
             // 
-            // Column5
+            // thêmToolStripMenuItem
             // 
-            this.Column5.DataPropertyName = "Quequan";
-            this.Column5.HeaderText = "Quê Quán";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
+            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.thêmToolStripMenuItem.Text = "Thêm";
             // 
-            // Column2
+            // xóaToolStripMenuItem
             // 
-            this.Column2.DataPropertyName = "Hoten";
-            this.Column2.HeaderText = "Họ Tên";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Ngaysinh";
-            this.Column3.HeaderText = "Ngày Sinh";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Gioitinh";
-            this.Column4.HeaderText = "Giới Tính";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Lop";
-            this.Column6.HeaderText = "Lớp";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Khoa";
-            this.Column7.HeaderText = "Khoa";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.xóaToolStripMenuItem.Text = "Xóa";
             // 
             // textBox1
             // 
@@ -256,6 +220,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(154, 24);
             this.comboBox2.TabIndex = 16;
+            this.comboBox2.Text = "CNTT";
             // 
             // comboBox3
             // 
@@ -270,6 +235,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(154, 24);
             this.comboBox3.TabIndex = 15;
+            this.comboBox3.Text = "K64";
             // 
             // comboBox4
             // 
@@ -284,6 +250,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(154, 24);
             this.comboBox4.TabIndex = 14;
+            this.comboBox4.Text = "Phú Yên";
             // 
             // dateTimePicker1
             // 
@@ -293,27 +260,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(147, 22);
             this.dateTimePicker1.TabIndex = 13;
-            // 
-            // a
-            // 
-            this.a.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.a.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thêmToolStripMenuItem,
-            this.xóaToolStripMenuItem});
-            this.a.Name = "contextMenuStrip1";
-            this.a.Size = new System.Drawing.Size(116, 52);
-            // 
-            // thêmToolStripMenuItem
-            // 
-            this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
-            this.thêmToolStripMenuItem.Text = "Thêm";
-            // 
-            // xóaToolStripMenuItem
-            // 
-            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
-            this.xóaToolStripMenuItem.Text = "Xóa";
             // 
             // add
             // 
@@ -331,6 +277,62 @@
             this.toolTip1.SetToolTip(this.add, "KK");
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // MASV
+            // 
+            this.MASV.DataPropertyName = "MASV";
+            this.MASV.HeaderText = "Mã SV";
+            this.MASV.MinimumWidth = 6;
+            this.MASV.Name = "MASV";
+            this.MASV.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "QueQuan";
+            this.Column5.HeaderText = "Quê Quán";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Hoten";
+            this.Column2.HeaderText = "Họ Tên";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Ngaysinh";
+            this.Column3.HeaderText = "Ngày Sinh";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "GioiTinhs";
+            this.Column4.HeaderText = "Giới Tính";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Lop";
+            this.Column6.HeaderText = "Lớp";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Khoa";
+            this.Column7.HeaderText = "Khoa";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
             // Page45
             // 
@@ -356,6 +358,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Page45";
             this.Text = "Page45";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Page45_FormClosing);
+            this.Load += new System.EventHandler(this.Page45_Load);
             this.Layout += new System.Windows.Forms.LayoutEventHandler(this.Page45_Layout);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.a.ResumeLayout(false);
@@ -383,6 +387,10 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ContextMenuStrip a;
+        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MASV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -390,9 +398,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.ContextMenuStrip a;
-        private System.Windows.Forms.ToolStripMenuItem thêmToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
     }
 }

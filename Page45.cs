@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,34 +13,76 @@ namespace Trashy_WinForm
 {
     public partial class Page45 : Form
     {
-        private List<SinhVien1> svs;
         bool isGender;
+        string connectString = "Data Source=MVT\\SQLEXPRESS01;Initial Catalog=kaioken;Integrated Security=True;";
+        SqlConnection conn;
+        SqlDataAdapter adapter;
+        DataTable dt;
+        bool isMale (string x)
+        {
+            return x == "Nam" ? true : false;
+        }
+        string getStringGender(bool x)
+        {
+            return x == true ? "Nam" : "Nữ";
+        }
+        string convertDateTime(string dt)
+        {
+            DateTime d = DateTime.ParseExact(dt,"dd-mm-yyyy",System.Globalization.CultureInfo.InvariantCulture);
+            return d.ToString("yyyy-mm-dd");
+        }
         public Page45()
         {
             InitializeComponent();
-            svs = new List<SinhVien1>();
-        }
-        
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            conn = new SqlConnection(connectString);
+            adapter = new SqlDataAdapter("select * from SV", conn);
+            dt = new DataTable();
         }
         void Reload()
         {
-            dataGridView1.DataSource = svs;
+            if(dt.Columns.Contains("Gioitinhs"))
+                dt.Columns.Remove("Gioitinhs");
+            dt.Rows.Clear();
+            adapter.Fill(dt);
+            dt.Columns.Add("Gioitinhs",typeof(string));
+            foreach (DataRow dr in dt.Rows)
+            {
+                dr["Gioitinhs"] = getStringGender((bool )dr["Gioitinh"]);
+            }
+            dt.Columns.Remove("Gioitinh");
         }
+        private void Page45_Load(object sender, EventArgs e)
+        {
+            conn.Open();
+            Reload();
+            dataGridView1.DataSource = dt;
+        }
+       
+
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            SqlCommand cmd = new SqlCommand("insert into SV values(@MASV,@Hoten,@QueQuan,@Lop,@Khoa,@Ngaysinh,@Gioitinh)", conn);
+            cmd.Parameters.Add("MASV", SqlDbType.VarChar);
+            cmd.Parameters.Add("Hoten", SqlDbType.NVarChar);
+            cmd.Parameters.Add("QueQuan", SqlDbType.NVarChar);
+            cmd.Parameters.Add("Lop", SqlDbType.VarChar);
+            cmd.Parameters.Add("Khoa", SqlDbType.VarChar);
+            cmd.Parameters.Add("Ngaysinh", SqlDbType.DateTime);
+            cmd.Parameters.Add("Gioitinh", SqlDbType.Bit);
+
+
+            cmd.Parameters["MASV"].Value = textBox1.Text;
+            cmd.Parameters["Hoten"].Value = textBox2.Text;
+            cmd.Parameters["QueQuan"].Value = comboBox4.Text;
+            cmd.Parameters["Lop"].Value = comboBox3.Text;
+            cmd.Parameters["Khoa"].Value = comboBox2.Text;
+            cmd.Parameters["Ngaysinh"].Value = convertDateTime(dateTimePicker1.Text);
+            cmd.Parameters["Gioitinh"].Value = (radioButton1.Checked) ? 1 : 0;
+            if (cmd.ExecuteNonQuery() == -1)
             {
-                dataGridView1.DataSource = new List<SinhVien1>();
-                svs.Add(new SinhVien1(int.Parse(textBox1.Text), textBox2.Text, dateTimePicker1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, isGender));
-                Reload();
+                MessageBox.Show("Lỗi");
             }
-            catch 
-            {
-                MessageBox.Show("ERROR");
-            }
+            Reload();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -69,25 +112,33 @@ namespace Trashy_WinForm
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = svs[e.RowIndex].MASV.ToString();
-            textBox2.Text = svs[e.RowIndex].Hoten.ToString();
-            dateTimePicker1.Text = svs[e.RowIndex].Ngaysinh;
-            comboBox4.Text = svs[e.RowIndex].Quequan;
-            comboBox3.Text = svs[e.RowIndex].Lop;
-            comboBox2.Text = svs[e.RowIndex].Khoa;
-            if (svs[e.RowIndex].Gioitinh=="Nam")
+            textBox1.Text = dt.Rows[e.RowIndex]["MASV"].ToString();
+            textBox2.Text = dt.Rows[e.RowIndex]["Hoten"].ToString();
+            dateTimePicker1.Text = dt.Rows[e.RowIndex]["Ngaysinh"].ToString();
+            comboBox4.Text = dt.Rows[e.RowIndex]["Quequan"].ToString();
+            comboBox3.Text = dt.Rows[e.RowIndex]["Lop"].ToString();
+            comboBox2.Text = dt.Rows[e.RowIndex]["Khoa"].ToString();
+            if (dt.Rows[e.RowIndex]["Gioitinhs"].ToString() == "Nam")
             {
-                radioButton1.Checked =true;
-            }   
+                radioButton1.Checked = true;
+            }
             else
             {
                 radioButton2.Checked = true;
-            }    
+            }
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void Page45_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           if(conn.State == ConnectionState.Open )
+            {
+                conn.Close();
+            }
         }
     }
 }
