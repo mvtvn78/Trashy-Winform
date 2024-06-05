@@ -33,5 +33,16 @@ namespace Trashy_WinForm.Properties {
                 return ((string)(this["mvtConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MVT\\SQLEXPRESS01;Initial Catalog=QuanLyHocSinh;Integrated Security=Tr" +
+            "ue;Encrypt=False")]
+        public string QuanLyHocSinhConnectionString {
+            get {
+                return ((string)(this["QuanLyHocSinhConnectionString"]));
+            }
+        }
     }
 }

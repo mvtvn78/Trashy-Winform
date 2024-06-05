@@ -23,7 +23,6 @@ namespace Trashy_WinForm
             dt.Columns.Add("Hello",typeof(string));
             dt.Columns.Add("Kaioken",typeof(string));
             dt.Rows.Add("Mai Van Tien", "Cung Xu Nu");
-            dt.Rows.Add("Phan Lam Nhu", "Cung Bo Cap");
         }
 
         private void ADO_Load(object sender, EventArgs e)
@@ -34,6 +33,11 @@ namespace Trashy_WinForm
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(dt.Rows[0]["Kaioken"].ToString());
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

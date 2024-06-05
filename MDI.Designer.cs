@@ -33,7 +33,11 @@
             this.bài2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.biToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.mvtDataSet1 = new Trashy_WinForm.mvtDataSet();
+            this.mvtDataSet2 = new Trashy_WinForm.mvtDataSet();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -45,7 +49,7 @@
             this.biToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,6 +83,16 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Đang có 0 form";
             // 
+            // mvtDataSet1
+            // 
+            this.mvtDataSet1.DataSetName = "mvtDataSet";
+            this.mvtDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mvtDataSet2
+            // 
+            this.mvtDataSet2.DataSetName = "mvtDataSet";
+            this.mvtDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // MDI
             // 
             this.AllowDrop = true;
@@ -98,6 +112,8 @@
             this.Leave += new System.EventHandler(this.MDI_Leave);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mvtDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +126,7 @@
         private System.Windows.Forms.ToolStripMenuItem bài2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem biToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private mvtDataSet mvtDataSet1;
+        private mvtDataSet mvtDataSet2;
     }
 }

@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,12 +85,42 @@
     <Compile Include="CaPheSinhVien.Designer.cs">
       <DependentUpon>CaPheSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chart.Designer.cs">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectDatabase\SQLConnect.cs" />
     <Compile Include="CRUD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Databinding1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Databinding1.Designer.cs">
+      <DependentUpon>Databinding1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5_1_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_1_HD.Designer.cs">
+      <DependentUpon>Form5_1_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5_2_HD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_2_HD.Designer.cs">
+      <DependentUpon>Form5_2_HD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_3.Designer.cs">
+      <DependentUpon>Form5_3.cs</DependentUpon>
     </Compile>
     <Compile Include="giaiphuongtrinh.cs">
       <SubType>Form</SubType>
@@ -139,6 +170,7 @@
     <Compile Include="MDI.Designer.cs">
       <DependentUpon>MDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="midProperties.cs" />
     <Compile Include="mvtDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -167,7 +199,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyHocSinhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyHocSinhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QueryDatabase\SQLQuery.cs" />
+    <Compile Include="Sidebar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sidebar.Designer.cs">
+      <DependentUpon>Sidebar.cs</DependentUpon>
+    </Compile>
     <Compile Include="SinhVien1.cs" />
     <Compile Include="Students.cs">
       <SubType>Form</SubType>
@@ -187,6 +230,18 @@
     <Compile Include="BT1Form.Designer.cs">
       <DependentUpon>BT1Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableLayout.Designer.cs">
+      <DependentUpon>TableLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestingUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TestingUserControl.Designer.cs">
+      <DependentUpon>TestingUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Timer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +249,12 @@
       <DependentUpon>Timer.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,11 +277,26 @@
     <EmbeddedResource Include="CaPheSinhVien.resx">
       <DependentUpon>CaPheSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Chart.resx">
+      <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CRUD.resx">
       <DependentUpon>CRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BT1.resx">
       <DependentUpon>BT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Databinding1.resx">
+      <DependentUpon>Databinding1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5_1_HD.resx">
+      <DependentUpon>Form5_1_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5_2_HD.resx">
+      <DependentUpon>Form5_2_HD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5_3.resx">
+      <DependentUpon>Form5_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="giaiphuongtrinh.resx">
       <DependentUpon>giaiphuongtrinh.cs</DependentUpon>
@@ -259,6 +335,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sidebar.resx">
+      <DependentUpon>Sidebar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Students.resx">
       <DependentUpon>Students.cs</DependentUpon>
     </EmbeddedResource>
@@ -268,8 +347,17 @@
     <EmbeddedResource Include="BT1Form.resx">
       <DependentUpon>BT1Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TableLayout.resx">
+      <DependentUpon>TableLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestingUserControl.resx">
+      <DependentUpon>TestingUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Timer.resx">
       <DependentUpon>Timer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManager.resx">
       <DependentUpon>UserManager.cs</DependentUpon>
@@ -300,10 +388,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QuanLyHocSinhDataSet.xsc">
+      <DependentUpon>QuanLyHocSinhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyHocSinhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyHocSinhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyHocSinhDataSet.xss">
+      <DependentUpon>QuanLyHocSinhDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\anhnen 1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menubar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
