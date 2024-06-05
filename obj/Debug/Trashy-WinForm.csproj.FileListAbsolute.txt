@@ -41,3 +41,4 @@ F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.Sidebar
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.UserControl1.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.TableLayout.resources
 F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.Databinding1.resources
+F:\Study\C#\Basic\Trashy-WinForm\Trashy-WinForm\obj\Debug\Trashy_WinForm.DataBinding2.resources

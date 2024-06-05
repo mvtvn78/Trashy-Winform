@@ -104,6 +104,12 @@
     <Compile Include="Databinding1.Designer.cs">
       <DependentUpon>Databinding1.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBinding2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBinding2.Designer.cs">
+      <DependentUpon>DataBinding2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form5_1_HD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Databinding1.resx">
       <DependentUpon>Databinding1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataBinding2.resx">
+      <DependentUpon>DataBinding2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form5_1_HD.resx">
       <DependentUpon>Form5_1_HD.cs</DependentUpon>
