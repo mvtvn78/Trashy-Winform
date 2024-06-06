@@ -119,13 +119,12 @@ namespace Trashy_WinForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(saveFileDialog2.ShowDialog() == DialogResult.OK)
+           OpenFileDialog da = new OpenFileDialog();
+             if(da.ShowDialog() == DialogResult.OK)
             {
-                StreamWriter streamWriter = File.CreateText(saveFileDialog2.FileName);
-                streamWriter.Write("Kaioken");
-                streamWriter.Close();
-
+                pictureBox1.ImageLocation = da.FileName;
             }
+
         }
     }
 }

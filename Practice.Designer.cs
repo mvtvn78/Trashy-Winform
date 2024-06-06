@@ -64,6 +64,7 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -72,6 +73,7 @@
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -358,12 +360,22 @@
             this.saveFileDialog2.FileName = "kaioken.txt";
             this.saveFileDialog2.Filter = "\"Text |*.txt|All files|*.*\"";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(131, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // Practice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button9);
@@ -387,6 +399,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +441,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

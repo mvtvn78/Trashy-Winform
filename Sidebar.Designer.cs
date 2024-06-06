@@ -34,23 +34,26 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.sideB = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.menuContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.menuTransition = new System.Windows.Forms.Timer(this.components);
             this.sliderBarTransition = new System.Windows.Forms.Timer(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.userControl11 = new Trashy_WinForm.UserControl1();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.sideB.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.menuContainer.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.menuContainer.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,42 +95,12 @@
             this.sideB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.sideB.Controls.Add(this.panel3);
             this.sideB.Controls.Add(this.menuContainer);
+            this.sideB.Controls.Add(this.panel5);
             this.sideB.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideB.Location = new System.Drawing.Point(0, 30);
             this.sideB.Name = "sideB";
             this.sideB.Size = new System.Drawing.Size(184, 436);
             this.sideB.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Trashy_WinForm.Properties.Resources.dashboard;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-9, -30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 132);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "HOME";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(185, 69);
-            this.panel2.TabIndex = 3;
-            // 
-            // menuContainer
-            // 
-            this.menuContainer.Controls.Add(this.panel2);
-            this.menuContainer.Controls.Add(this.panel4);
-            this.menuContainer.Location = new System.Drawing.Point(3, 78);
-            this.menuContainer.Name = "menuContainer";
-            this.menuContainer.Size = new System.Drawing.Size(191, 53);
-            this.menuContainer.TabIndex = 2;
             // 
             // panel3
             // 
@@ -150,6 +123,37 @@
             this.button2.Text = "DASHBOARD";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // menuContainer
+            // 
+            this.menuContainer.Controls.Add(this.panel2);
+            this.menuContainer.Controls.Add(this.panel4);
+            this.menuContainer.Location = new System.Drawing.Point(3, 78);
+            this.menuContainer.Name = "menuContainer";
+            this.menuContainer.Size = new System.Drawing.Size(191, 50);
+            this.menuContainer.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(185, 69);
+            this.panel2.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Trashy_WinForm.Properties.Resources.dashboard;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-9, -30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(230, 132);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "HOME";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -182,6 +186,27 @@
             this.sliderBarTransition.Interval = 10;
             this.sliderBarTransition.Tick += new System.EventHandler(this.sliderBarTransition_Tick);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.button4);
+            this.panel5.Location = new System.Drawing.Point(3, 134);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(185, 69);
+            this.panel5.TabIndex = 5;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Trashy_WinForm.Properties.Resources.dashboard;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(-9, -30);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(230, 132);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "DASHBOARD";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // userControl11
             // 
             this.userControl11.Location = new System.Drawing.Point(569, 0);
@@ -206,10 +231,11 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.sideB.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.menuContainer.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.menuContainer.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -230,5 +256,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Timer sliderBarTransition;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button4;
     }
 }

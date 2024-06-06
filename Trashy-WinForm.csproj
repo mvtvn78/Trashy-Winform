@@ -73,6 +73,13 @@
       <DependentUpon>Arr1D.cs</DependentUpon>
     </Compile>
     <Compile Include="ArrClass.cs" />
+    <Compile Include="BindingCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BindingCustom.Designer.cs">
+      <DependentUpon>BindingCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BindingCustomClass.cs" />
     <Compile Include="BT2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Arr1D.resx">
       <DependentUpon>Arr1D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BindingCustom.resx">
+      <DependentUpon>BindingCustom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BT2.resx">
       <DependentUpon>BT2.cs</DependentUpon>
